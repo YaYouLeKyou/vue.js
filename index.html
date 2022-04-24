@@ -1,0 +1,34 @@
+<html>
+  <body>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+        <h1>VueMart</h1>
+      
+        <h2>Panier</h2>
+        <ul>
+          <li>Pommes: {{ costOfApples }}€</li>
+          <li>Bananes: {{ costOfBananas }}€</li>
+          <li>Noix de coco: {{ costOfCoconuts }}€</li>
+        </ul>
+        <p>Total: {{ costOfApples + costOfBananas + costOfCoconuts }}€</li>
+      
+        <h2>Horaires d'ouverture</h2>
+        <p>Dimanche: 10h - 16h</p>
+        <p>Du lundi au vendredi : 09h - 17h</p>
+        <p>Samedi : 09h30 - 18h00</p>
+      </div>
+
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            costOfApples: 6,
+            costOfBananas: 2,
+            costOfCoconuts: 8,
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
